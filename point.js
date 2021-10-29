@@ -4,7 +4,12 @@ module.exports = class Point {
     this.y = y;
   }
 
-  toString() {
-    return `(${this.x}, ${this.x})`
+  equals(p) {
+    return (this.x == p.x) && (this.y == p.y)
   }
+
+  toString() {
+    return `(${this.x}, ${this.y})`
+  }
+
 }

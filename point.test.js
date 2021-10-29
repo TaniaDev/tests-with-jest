@@ -18,6 +18,27 @@ describe('Point', () => {
       expect(p.y).toBe(y)
     });
   })
+
+  describe('equals', () => {
+    test('Returns if it equals other point', () => {
+      const p1 = new Point(1, 2)
+      const p2 = new Point(1, 2)
+
+      const result = p1.equals(p2)
+
+      expect(result).toBe(true)
+    })
+
+    test('Returns if it different from other point', () => {
+      const p1 = new Point(4, 7)
+      const p2 = new Point(1, 2)
+
+      const result = p1.equals(p2)
+
+      expect(result).toBe(false)
+    })
+  })
+
   describe('toString', () => {
     test('Returns a string with the format (x, y)', () => {
       const p = new Point(2, 1)
